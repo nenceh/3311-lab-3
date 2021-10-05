@@ -12,14 +12,14 @@
 <br>
 
 <h2> Video Demo </h3>
-<p> As GitHub cannot support attaching files larger than 10MB, click <b>here</b> to access a YouTube unlisted video. </p>
+<p> As GitHub cannot support attaching files larger than 10MB, click <b> <a href="https://youtu.be/jH8qIvrLOBs">here</a></b> to access a YouTube unlisted video. </p>
 
 <br>
 
 <h2> Written Report </h3>
 <p>
-  Click <b><a href="">here</a></b> to download a PDF version of my written report. 
-  
+  Click <b><a href="https://github.com/nenceh/3311-lab-3/files/7288150/Nancy.Hao.-.Lab.3.Report.pdf">here</a></b> to download a PDF version of my written report.
+
   <br> ... <br><br>
   
   If you don't feel like downloading, here is a rundown of what the report is composed of. Essentially, there are four main parts:
