@@ -12,13 +12,13 @@
 <br>
 
 <h2> Video Demo </h3>
-<p> As GitHub cannot support attaching video larger than 10MB, click <b>here</b> to access a YouTube unlisted video. </p>
+<p> As GitHub cannot support attaching files larger than 10MB, click <b>here</b> to access a YouTube unlisted video. </p>
 
 <br>
 
 <h2> Written Report </h3>
 <p>
-  Click <b><a href="https://github.com/nenceh/3311-lab-3/files/7282916/E.EECS3311_F21_syllabus.pdf">here</a></b> to download a PDF version of my written report. 
+  Click <b><a href="">here</a></b> to download a PDF version of my written report. 
   
   <br> ... <br><br>
   
