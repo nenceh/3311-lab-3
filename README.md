@@ -112,8 +112,7 @@
   <br>
 
   ![uml_1](https://user-images.githubusercontent.com/45662855/135968656-55d3e55d-da3f-4f97-b571-9c53922bdeb3.png)
-
-  <p align="center"> Figure 1: The image of my first UML diagram that implements two design patterns. </p>
+  <h6 align="center"> Figure 1: The image of my first UML diagram that implements two design patterns. </h6>
 
   <br>
 
@@ -145,7 +144,7 @@
 
   ![uml_2](https://user-images.githubusercontent.com/45662855/135970363-da8e820b-24af-4e23-90fa-54934f904319.png)
 
-  <p align="center"> Figure 2: The image of my second UML diagram that implements one design pattern. </p>
+  <h6 align="center"> Figure 2: The image of my second UML diagram that implements one design pattern. </h6>
    
   <br>
 
