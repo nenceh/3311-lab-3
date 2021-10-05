@@ -6,7 +6,7 @@
   
   <br>
 
-  This software project is about combining the implementation of a Java graphical user interface (GUI) using <i>javax.swing</i> objects and components with object-oriented programming and design, while using design patterns. The goal for this software project is to allow users to load 6 shapes (rectangles, squares, circles) and has the functionality to sort the shapes by their areas, all displayed visually on a Java GUI.
+  This software project is about combining the implementation of a Java graphical user interface (GUI) using <i>javax.swing</i> objects and components with object-oriented programming (OOP) and object-oriented design (OOD), while using design patterns. The goal for this software project is to allow users to load 6 shapes (rectangles, squares, circles) and has the functionality to sort the shapes by their areas, all displayed visually on a Java GUI.
 </p>
 
 <br>
@@ -79,9 +79,9 @@
   
   <hr>
   
-  <h3><strong> Introduction </strong> </h3>
+  <h3><strong> INTRODUCTION </strong> </h3>
   
-  This software project is about combining the implementation of a Java graphical user interface (GUI) using javax.swing objects and components with object-oriented programming and design, while using design patterns. The goal for this software project is to allow users to load 6 shapes (rectangles, squares, circles) and has the functionality to sort the shapes by their areas, all displayed visually on a Java GUI.
+  This software project is about combining the implementation of a Java graphical user interface (GUI) using <i>javax.swing</i> objects and components with object-oriented programming (OOP) and object-oriented design (OOD), while using design patterns. The goal for this software project is to allow users to load 6 shapes (rectangles, squares, circles) and has the functionality to sort the shapes by their areas, all displayed visually on a Java GUI.
   
   <br>
   
@@ -105,7 +105,7 @@
 
   <br>
 
-  <h3><strong> Design </strong> </h3>
+  <h3><strong> DESIGN </strong> </h3>
 
   The following image is a picture of my first class diagram that contains two design patterns.
   
@@ -116,11 +116,11 @@
 
   <br>
 
-  In the UML class diagram seen in Figure 1, I have designed this software project to incorporate object-oriented programming and design, and two design patterns: Singleton and Factory. I decided to make the <i>SortingTechnique</i> and <i>ShapeFactory</i> class have the Singleton design pattern because those two classes perform only one job each and do not need several instances for this software project to function properly. The <i>SortingTechnique</i> class will sort the list of shapes as its primary and only job. Therefore, having one instance will work the same as having several instances of this object, and so I decided to practice implementing the Singleton design pattern via this class. As well, <i>ShapeFactory</i>’s only job is to generate a random shape, and therefore this project only needs one “factory”/ random shape-generator. <i>ShapeFactory</i> also has the Factory pattern which also forms its relationships with the other classes. I feel this design pattern applies well to this software project because of the required “randomness” of shapes (random shape generated with random dimensions; no pre-determined shapes). By implementing the Factory design pattern, my project will generate random shapes at runtime.
+  In the UML class diagram seen in Figure 1, I have designed this software project to incorporate OOP and OOD, and two design patterns: Singleton and Factory. I decided to make the <i>SortingTechnique</i> and <i>ShapeFactory</i> class have the Singleton design pattern because those two classes perform only one job each and do not need several instances for this software project to function properly. The <i>SortingTechnique</i> class will sort the list of shapes as its primary and only job. Therefore, having one instance will work the same as having several instances of this object, and so I decided to practice implementing the Singleton design pattern via this class. As well, <i>ShapeFactory</i>’s only job is to generate a random shape, and therefore this project only needs one “factory”/ random shape-generator. <i>ShapeFactory</i> also has the Factory pattern which also forms its relationships with the other classes. I feel this design pattern applies well to this software project because of the required “randomness” of shapes (random shape generated with random dimensions; no pre-determined shapes). By implementing the Factory design pattern, my project will generate random shapes at runtime.
 
   <br>
 
-  Figure 1 also details the four main object-oriented design principles used:
+  Figure 1 also details the four main OOD principles used:
   <ol>
     <li> Abstraction <br>
       In the classes, the fields and methods are private or protected, except for the public constructors. The visibility of private makes it so that the field or method cannot be accessed in other classes except the ones which it is declared in. The visibility of protected means the field or method can be accessed by any class in the same package. There are setters and getters methods to access the value of the private fields.
@@ -152,11 +152,11 @@
   
   <br>
   
-  My second diagram implements the Builder design pattern, where the <i>ShapeFactory</i> class supports the common building process of a “shape” and the <i>Shape</i> class is an interface with declared methods. Although this diagram allows the creation of different representations of “shapes” in the same constructive way, by having an interface, it means the classes implementing it will each need complete concrete methods written separately. As <i>Square</i>, <i>Rectangle</i> and <i>Circle</i> implement from the <i>Shape</i> interface, they cannot use or reference from a parent class, and I feel this does not have the same level of object-oriented design as the first diagram. In addition, the first diagram seems more user-friendly as viewers can clearly identify the object-oriented approach I took. Viewers can also clearly see which classes have the Singleton design pattern by identifying the private constructors, static references, and public <i>getInstance()</i> methods.
+  My second diagram implements the Builder design pattern, where the <i>ShapeFactory</i> class supports the common building process of a “shape” and the <i>Shape</i> class is an interface with declared methods. Although this diagram allows the creation of different representations of “shapes” in the same constructive way, by having an interface, it means the classes implementing it will each need complete concrete methods written separately. As <i>Square</i>, <i>Rectangle</i> and <i>Circle</i> implement from the <i>Shape</i> interface, they cannot use or reference from a parent class, and I feel this does not have the same level of OOD as the first diagram. In addition, the first diagram seems more user-friendly as viewers can clearly identify the object-oriented approach I took. Viewers can also clearly see which classes have the Singleton design pattern by identifying the private constructors, static references, and public <i>getInstance()</i> methods.
 
   <br>
 
-  <h3><strong> Implementation </strong> </h3>
+  <h3><strong> IMPLEMENTATION </strong> </h3>
 
   The algorithm I used to sort the areas of the shapes in increasing order is a simple Selection sort algorithm. The algorithm for Selection sort sorts an array or list by continuously finding the minimum element from the list and places the element at beginning of the list. I decided to use Selection sort because it is very simple to implement and easy for viewers to understand.
   
@@ -206,6 +206,22 @@
   
   <br>
   
-  <h3><strong> Conclusion </strong> </h3>
+  <h3><strong> CONCLUSION </strong> </h3>
+  
+  Personally, what went well was coding the necessary specifics for the Java GUI. I have experience and used <i>javax.swing</i> before so I spent less time building the appropriate GUI and more time thinking about how I may go about implementing the design patterns.
+In the beginning stages of this software project, I rushed through UML drawing phase to get to the implementation phase because I was eager to start coding. After bouncing a bit back and forth between Eclipse and my UML diagram, I realized that my UML diagram lacked a lot of specificity in terms of methods, parameters and method signatures. I then went back to UML drawing phase to refine the drawings.
+  
+  <br>
+  
+  I learned a lot more about the different design patterns and why a specific design pattern work in different contexts. I usually learn better by doing instead of just reading about it, so after coding them I feel the idea of the design patterns have cemented into my brain.
+  
+  <br>
+
+  My top three recommendations to ease the completion of the software project are:
+  <ol>
+    <li> Spend time on your UML diagrams ➜ for those who do not have a strong background in OOP, the UML diagram drawing phase can help you visualize OOP and OOD </li>
+    <li> Look at as many examples for design patterns to get an idea as to which design patterns work in which contexts </li>
+    <li> Find and try out a simple tutorial on simple shape drawing on a Java GUI without any add-ons (like buttons). Once you get familiar with how the GUI works, you can move on to learning how to draw 6 shapes, build buttons and clear the canvas when needed. </li>
+  </ol>
   
 </p>
