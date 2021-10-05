@@ -116,7 +116,7 @@
 
   <br>
 
-  In the UML class diagram seen in Figure 1, I have designed this software project to incorporate object-oriented programming and design, and two design patterns: Singleton and Factory. I decided to make the SortingTechnique and ShapeFactory class have the Singleton design pattern because those two classes perform only one job each and do not need several instances for this software project to function properly. The SortingTechnique class will sort the list of shapes as its primary and only job. Therefore, having one instance will work the same as having several instances of this object, and so I decided to practice implementing the Singleton design pattern via this class. As well, ShapeFactory’s only job is to generate a random shape, and therefore this project only needs one “factory”/ random shape-generator. ShapeFactory also has the Factory pattern which also forms its relationships with the other classes. I feel this design pattern applies well to this software project because of the required “randomness” of shapes (random shape generated with random dimensions; no pre-determined shapes). By implementing the Factory design pattern, my project will generate random shapes at runtime.
+  In the UML class diagram seen in Figure 1, I have designed this software project to incorporate object-oriented programming and design, and two design patterns: Singleton and Factory. I decided to make the <i>SortingTechnique</i> and <i>ShapeFactory</i> class have the Singleton design pattern because those two classes perform only one job each and do not need several instances for this software project to function properly. The <i>SortingTechnique</i> class will sort the list of shapes as its primary and only job. Therefore, having one instance will work the same as having several instances of this object, and so I decided to practice implementing the Singleton design pattern via this class. As well, <i>ShapeFactory</i>’s only job is to generate a random shape, and therefore this project only needs one “factory”/ random shape-generator. <i>ShapeFactory</i> also has the Factory pattern which also forms its relationships with the other classes. I feel this design pattern applies well to this software project because of the required “randomness” of shapes (random shape generated with random dimensions; no pre-determined shapes). By implementing the Factory design pattern, my project will generate random shapes at runtime.
 
   <br>
 
@@ -152,13 +152,13 @@
   
   <br>
   
-  My second diagram implements the Builder design pattern, where the ShapeFactory class supports the common building process of a “shape” and the Shape class is an interface with declared methods. Although this diagram allows the creation of different representations of “shapes” in the same constructive way, by having an interface, it means the classes implementing it will each need complete concrete methods written separately. As Square, Rectangle and Circle implement from the Shape interface, they cannot use or reference from a parent class, and I feel this does not have the same level of object-oriented design as the first diagram. In addition, the first diagram seems more user-friendly as viewers can clearly identify the object-oriented approach I took. Viewers can also clearly see which classes have the Singleton design pattern by identifying the private constructors, static references, and public getInstance() methods.
+  My second diagram implements the Builder design pattern, where the <i>ShapeFactory</i> class supports the common building process of a “shape” and the <i>Shape</i> class is an interface with declared methods. Although this diagram allows the creation of different representations of “shapes” in the same constructive way, by having an interface, it means the classes implementing it will each need complete concrete methods written separately. As <i>Square</i>, <i>Rectangle</i> and <i>Circle</i> implement from the <i>Shape</i> interface, they cannot use or reference from a parent class, and I feel this does not have the same level of object-oriented design as the first diagram. In addition, the first diagram seems more user-friendly as viewers can clearly identify the object-oriented approach I took. Viewers can also clearly see which classes have the Singleton design pattern by identifying the private constructors, static references, and public <i>getInstance()</i> methods.
 
   <br>
 
   <h3><strong> Implementation </strong> </h3>
 
-  The algorithm I used to sort the areas of the shapes in increasing order is a simple Selection sort algorithm. The algorithm for Selection sort sorts an array or list by continuously finding the minimum element from the list and places the element at beginning of the list. I decided to use Selection sort because it is very simple to implement and for viewers to understand.
+  The algorithm I used to sort the areas of the shapes in increasing order is a simple Selection sort algorithm. The algorithm for Selection sort sorts an array or list by continuously finding the minimum element from the list and places the element at beginning of the list. I decided to use Selection sort because it is very simple to implement and easy for viewers to understand.
   
   <br>
   
@@ -170,20 +170,42 @@
 
   <br>
   
-  I have implemented the first UML diagram as seen in Figure 1. As stated earlier in the report, a big reason is I feel the first UML diagram has a more user-friendly design. As well, I decided to implement the first design I feel it will provide more flexibility in potential future expansions of this software project.
+  I have implemented the first UML diagram as seen in Figure 1. As stated earlier in the report, a big reason is I feel the first UML diagram has a more user-friendly design. As well, I feel it will provide more flexibility in potential future expansions of this software project.
 
   <br>
   
-  This implementation of the software project begins with the main method located in ShapesGUI. The main method only has one line new ShapesGUI();, which will instantiate a ShapesGUI object. The ShapesGUI constructor will build the GUI/interface using javax.swing components, including two buttons: Load shapes and Sort shapes. When Load shapes button is clicked, ShapesGUI will create and instantiate a Singleton ShapeFactory object where it will generate six random Shape objects with random dimensions and a random colour associated with each shape, and ShapesGUI will store all six shapes inside an ArrayList. Determining what random shape is created is based on a random integer generated `int r = ran.nextInt(99);` If r ∈[0,32], a rectangle is created. If r ∈[33,65], a circle is created. If r ∈[66,98], a square is created. After the list is created, ShapesGUI will move to displaying the 6 shapes inside the list onto the interface. ShapesGUI will call the method `public void paintComponent (Graphics g)` inside Shape. Since each shape has the ability to draw itself, each shape will draw itself based at their respective x and y coordinates. The x and y coordinates are determined by the formula `i*75 + 100`, where i is the index of the list where the shape is located. That way, each shape will have an appropriate position inside the GUI dimensions of 600x600. When the Sort shapes button is clicked, ShapesGUI will instantiate a Singleton SortingTechnique object. When calling the SortingTechnique object, it will sort the list of shapes in increasing order by the value of their areas by switching around the x and y coordinates of each shape. Finally, ShapesGUI will again display the 6 shapes onto the interface by allowing each shape to draw itself.
+  This implementation of the software project begins with the main method located in <i>ShapesGUI</i>. The main method only has one line `new ShapesGUI();`, which will instantiate a <i>ShapesGUI</i> object. The <i>ShapesGUI</i> constructor will build the GUI using javax.swing components, including two buttons: <i>Load shapes</i> and <i>Sort shapes</i>. When <i>Load shapes</i> button is clicked, <i>ShapesGUI</i> will create and instantiate a Singleton <i>ShapeFactory</i> object where it will generate six random <i>Shape</i> objects with random dimensions and a random colour associated with each shape, and <i>ShapesGUI</i> will store all six shapes inside an ArrayList. Determining what random shape is created is based on a random integer generated `int r = ran.nextInt(99);` If r ∈[0,32], a rectangle is created. If r ∈[33,65], a circle is created. If r ∈[66,98], a square is created. After the list is created, <i>ShapesGUI</i> will move to displaying the 6 shapes inside the list onto the interface. <i>ShapesGUI</i> will call the method `public void paintComponent (Graphics g)` inside <i>Shape</i>. Since each shape has the ability to draw itself, each shape will draw itself based at their respective x and y coordinates. The x and y coordinates are determined by the formula `i*75 + 100`, where <i>i</i> is the index of the list where the shape is located. That way, each shape will have an appropriate position inside the GUI dimensions of 600x600. When the <i>Sort shapes</i> button is clicked, <i>ShapesGUI</i> will instantiate a Singleton <i>SortingTechnique</i> object. When calling the <i>SortingTechnique</i> object, it will sort the list of shapes in increasing order by the value of their areas by switching around the x and y coordinates of each shape. Finally, <i>ShapesGUI</i> will again display the 6 shapes onto the interface by allowing each shape to draw itself.
 
   <br>
   
-  In this software project, the tools I used Eclipse IDE Version: 2021-06 (4.20.0), the Java programming language and JDK Version 11.0.9, Microsoft Word, the online tool diagrams.net to draw the UML diagrams, GitHub to upload the necessary project files, and HyperCam2 to capture my video demonstration.
+  In this software project, the tools I used <a href="https://www.eclipse.org/">Eclipse</a> IDE Version: 2021-06 (4.20.0), the Java programming language and JDK Version 11.0.9, Microsoft Word, the online tool <a href="https://www.diagrams.net/">diagrams.net</a> to draw the UML diagrams, <a href="https://github.com/">GitHub</a> to upload the necessary project files, and <a href="http://hypercam.uptodown.hyperionics.com/hc2/">HyperCam2</a> to capture my video demonstration.
 
   <br>
   
-   The following are images of my interface when the code is executed.
-   
-   ... TBA
-
+  The following are images of my interface when the code is executed.
+  
+  <br>
+  
+  ![fig3](https://user-images.githubusercontent.com/45662855/136064663-029dbc8b-f7b7-43c3-af38-188437c09a27.png)
+  <h6 align="center"> Figure 3: An image of the freshly-executed interface. </h6>
+  
+  <br>
+  
+  ![fig4](https://user-images.githubusercontent.com/45662855/136064712-94b91037-519d-44cd-87db-0495c834c88f.png)
+  <h6 align="center"> Figure 4: An image of the interface when <i>Load shapes</i> button is clicked. </h6>
+  
+  <br>
+  
+  ![fig5](https://user-images.githubusercontent.com/45662855/136064740-8e4bd20a-1527-4399-a44f-6b2b7a44918f.png)
+  <h6 align="center"> Figure 5: An image of the interface when <i>Sort shapes</i> button is clicked. </h6>
+  
+  <br>
+  
+  ![fig6](https://user-images.githubusercontent.com/45662855/136064769-4f3ec449-6624-4a4c-b190-0d1a35bcb559.png)
+  <h6 align="center"> Figure 6: An image of the interface when <i>Sort shapes</i> button is clicked before <i>Load shapes</i> button. </h6>
+  
+  <br>
+  
+  <h3><strong> Conclusion </strong> </h3>
+  
 </p>
