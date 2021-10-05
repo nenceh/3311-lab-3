@@ -85,11 +85,11 @@
   
   <br>
   
-  Some challenges associated to the software project include:
+  Some challenges associated with the software project include:
   <ul>
     <li> Inheritance ➜ the children shape objects can inherit from the parent shape object </li>
     <li> Abstraction ➜ methods of a class is not exposed to other classes that are not relevant to it </li>
-    <li> Positioning the GUI objects successfully and in appropriate places </li>
+    <li> Positioning the GUI objects successfully and in the appropriate places </li>
     <li> Successfully applying some of the design patterns </li>
   </ul>
 
@@ -101,7 +101,7 @@
     <li> Inheritance ➜ I will make sure the shape objects of Rectangle, Square and Circle are the children classes of the generic object of Shape. I will also make sure the children can reuse the parent’s fields and methods. </li>
   </ul>
 
-  I am going to structure the report by first doing the first two parts (introduction and design of the solution). Then, I will move onto part 3: implementation of the solution, where I will write my code in Java in Eclipse. Finally, after the entire coding and the unified modeling language (UML) diagrams have been completed, I will finish the report by writing part 4: conclusion.
+  I am going to structure the report by first doing the first two parts (introduction and design of the solution). Then, I will move on to part 3: implementation of the solution, where I will write my code in Java in Eclipse. Finally, after the entire coding and the unified modeling language (UML) diagrams have been completed, I will finish the report by writing part 4: conclusion.
 
   <br>
 
@@ -116,20 +116,20 @@
 
   <br>
 
-  In the UML class diagram seen in Figure 1, I have designed this software project to incorporate OOP and OOD, and two design patterns: Singleton and Factory. I decided to make the <i>SortingTechnique</i> and <i>ShapeFactory</i> class have the Singleton design pattern because those two classes perform only one job each and do not need several instances for this software project to function properly. The <i>SortingTechnique</i> class will sort the list of shapes as its primary and only job. Therefore, having one instance will work the same as having several instances of this object, and so I decided to practice implementing the Singleton design pattern via this class. As well, <i>ShapeFactory</i>’s only job is to generate a random shape, and therefore this project only needs one “factory”/ random shape-generator. <i>ShapeFactory</i> also has the Factory pattern which also forms its relationships with the other classes. I feel this design pattern applies well to this software project because of the required “randomness” of shapes (random shape generated with random dimensions; no pre-determined shapes). By implementing the Factory design pattern, my project will generate random shapes at runtime.
+  In the UML class diagram seen in Figure 1, I have designed this software project to incorporate OOP and OOD, and two design patterns: Singleton and Factory. I decided to make the <i>SortingTechnique</i> and <i>ShapeFactory</i> class have the Singleton design pattern because those two classes perform only one job each and do not need several instances for this software project to function properly. The <i>SortingTechnique</i> class will sort the list of shapes as its primary and only job. Therefore, having one instance will work the same as having several instances of this object, and so I decided to practice implementing the Singleton design pattern via this class. As well, <i>ShapeFactory</i>’s only job is to generate a random shape, and therefore this project only needs one “factory”/ random shape-generator. <i>ShapeFactory</i> also has the Factory pattern which also forms its relationships with the other classes. I feel this design pattern applies well to this software project because of the required “randomness” of shapes (random shapes generated with random dimensions; no pre-determined shapes). By implementing the Factory design pattern, my project will generate random shapes at runtime.
 
   <br>
 
   Figure 1 also details the four main OOD principles used:
   <ol>
     <li> Abstraction <br>
-      In the classes, the fields and methods are private or protected, except for the public constructors. The visibility of private makes it so that the field or method cannot be accessed in other classes except the ones which it is declared in. The visibility of protected means the field or method can be accessed by any class in the same package. There are setters and getters methods to access the value of the private fields.
+      In the classes, the fields and methods are private or protected, except for the public constructors. The visibility of private makes it so that the field or method cannot be accessed in other classes except the ones in which it is declared in. The visibility of protected means the field or method can be accessed by any class in the same package. There are setters and getters methods to access the value of the private fields.
     </li>
     <li> Encapsulation <br>
-      In the classes, encapsulation is used to keep the data (fields and methods) in one class bundled. This is so that there is restriction from accessing the data directly.
+      In the classes, encapsulation is used to keep the data (fields and methods) in one class bundled. This is so that there is a restriction from accessing the data directly.
     </li>
     <li> Inheritance <br>
-      The Rectangle, Square and Circle class inherit from their respective parent class. Each child is able to reuse fields and methods that belong to the parent.
+      The Rectangle, Square and Circle classes inherit from their respective parent class. Each child can reuse fields and methods that belong to the parent.
     </li>
     <li> Polymorphism <br>
       In the diagram, polymorphism is used around a concept of a shape. For example, a concept of a square can be in place of a concept of a rectangle but with square’s behaviours.
@@ -152,7 +152,7 @@
   
   <br>
   
-  My second diagram implements the Builder design pattern, where the <i>ShapeFactory</i> class supports the common building process of a “shape” and the <i>Shape</i> class is an interface with declared methods. Although this diagram allows the creation of different representations of “shapes” in the same constructive way, by having an interface, it means the classes implementing it will each need complete concrete methods written separately. As <i>Square</i>, <i>Rectangle</i> and <i>Circle</i> implement from the <i>Shape</i> interface, they cannot use or reference from a parent class, and I feel this does not have the same level of OOD as the first diagram. In addition, the first diagram seems more user-friendly as viewers can clearly identify the object-oriented approach I took. Viewers can also clearly see which classes have the Singleton design pattern by identifying the private constructors, static references, and public <i>getInstance()</i> methods.
+  My second diagram implements the Builder design pattern, where the <i>ShapeFactory</i> class supports the common building process of a “shape” and the <i>Shape</i> class is an interface with declared methods. Although this diagram allows the creation of different representations of “shapes” in the same constructive way, having an interface means the classes implementing it will each need complete concrete methods written separately. As <i>Square</i>, <i>Rectangle</i> and <i>Circle</i> implement from the <i>Shape</i> interface, they cannot use or reference from a parent class, and I feel this does not have the same level of OOD as the first diagram. In addition, the first diagram seems more user-friendly as viewers can clearly identify the object-oriented approach I took. Viewers can also clearly see which classes have the Singleton design pattern by identifying the private constructors, static references, and public <i>getInstance()</i> methods.
 
   <br>
 
@@ -174,7 +174,7 @@
 
   <br>
   
-  This implementation of the software project begins with the main method located in <i>ShapesGUI</i>. The main method only has one line `new ShapesGUI();`, which will instantiate a <i>ShapesGUI</i> object. The <i>ShapesGUI</i> constructor will build the GUI using javax.swing components, including two buttons: <i>Load shapes</i> and <i>Sort shapes</i>. When <i>Load shapes</i> button is clicked, <i>ShapesGUI</i> will create and instantiate a Singleton <i>ShapeFactory</i> object where it will generate six random <i>Shape</i> objects with random dimensions and a random colour associated with each shape, and <i>ShapesGUI</i> will store all six shapes inside an ArrayList. Determining what random shape is created is based on a random integer generated `int r = ran.nextInt(99);` If r ∈[0,32], a rectangle is created. If r ∈[33,65], a circle is created. If r ∈[66,98], a square is created. After the list is created, <i>ShapesGUI</i> will move to displaying the 6 shapes inside the list onto the interface. <i>ShapesGUI</i> will call the method `public void paintComponent (Graphics g)` inside <i>Shape</i>. Since each shape has the ability to draw itself, each shape will draw itself based at their respective x and y coordinates. The x and y coordinates are determined by the formula `i*75 + 100`, where <i>i</i> is the index of the list where the shape is located. That way, each shape will have an appropriate position inside the GUI dimensions of 600x600. When the <i>Sort shapes</i> button is clicked, <i>ShapesGUI</i> will instantiate a Singleton <i>SortingTechnique</i> object. When calling the <i>SortingTechnique</i> object, it will sort the list of shapes in increasing order by the value of their areas by switching around the x and y coordinates of each shape. Finally, <i>ShapesGUI</i> will again display the 6 shapes onto the interface by allowing each shape to draw itself.
+  This implementation of the software project begins with the main method located in <i>ShapesGUI</i>. The main method only has one line `new ShapesGUI();`, which will instantiate a <i>ShapesGUI</i> object. The <i>ShapesGUI</i> constructor will build the GUI using javax.swing components, including two buttons: <i>Load shapes</i> and <i>Sort shapes</i>. When <i>Load shapes</i> button is clicked, <i>ShapesGUI</i> will create and instantiate a Singleton <i>ShapeFactory</i> object where it will generate six random <i>Shape</i> objects with random dimensions and a random colour associated with each shape, and <i>ShapesGUI</i> will store all six shapes inside an ArrayList. Determining what random shape is created is based on a random integer generated `int r = ran.nextInt(99);` If r ∈[0,32], a rectangle is created. If r ∈[33,65], a circle is created. If r ∈[66,98], a square is created. After the list is created, <i>ShapesGUI</i> will move to display the 6 shapes inside the list onto the interface. <i>ShapesGUI</i> will call the method `public void paintComponent (Graphics g)` inside <i>Shape</i>. Since each shape has the ability to draw itself, each shape will draw itself based on its respective x and y coordinates. The x and y coordinates are determined by the formula `i*75 + 100`, where <i>i</i> is the index of the list where the shape is located. That way, each shape will have an appropriate position inside the GUI dimensions of 600x600. When the <i>Sort shapes</i> button is clicked, <i>ShapesGUI</i> will instantiate a Singleton <i>SortingTechnique</i> object. When calling the <i>SortingTechnique</i> object, it will sort the list of shapes in increasing order by the value of their areas by switching around the x and y coordinates of each shape. Finally, <i>ShapesGUI</i> will again display the 6 shapes onto the interface by allowing each shape to draw itself.
 
   <br>
   
@@ -187,7 +187,7 @@
   <br>
   
   ![fig3](https://user-images.githubusercontent.com/45662855/136064663-029dbc8b-f7b7-43c3-af38-188437c09a27.png)
-  <h6 align="center"> Figure 3: An image of the freshly-executed interface. </h6>
+  <h6 align="center"> Figure 3: An image of the freshly executed interface. </h6>
   
   <br>
   
@@ -209,11 +209,14 @@
   <h3><strong> CONCLUSION </strong> </h3>
   
   Personally, what went well was coding the necessary specifics for the Java GUI. I have experience and used <i>javax.swing</i> before so I spent less time building the appropriate GUI and more time thinking about how I may go about implementing the design patterns.
-In the beginning stages of this software project, I rushed through UML drawing phase to get to the implementation phase because I was eager to start coding. After bouncing a bit back and forth between Eclipse and my UML diagram, I realized that my UML diagram lacked a lot of specificity in terms of methods, parameters and method signatures. I then went back to UML drawing phase to refine the drawings.
+
+  <br>
+
+  In the beginning stages of this software project, I rushed through the UML drawing phase to get to the implementation phase because I was eager to start coding. After bouncing a bit back and forth between Eclipse and my UML diagram, I realized that my UML diagram lacked a lot of specificity in terms of methods, parameters and method signatures. I then went back to UML drawing phase to refine the drawings.
   
   <br>
   
-  I learned a lot more about the different design patterns and why a specific design pattern work in different contexts. I usually learn better by doing instead of just reading about it, so after coding them I feel the idea of the design patterns have cemented into my brain.
+  I learned a lot more about the different design patterns and why a specific design pattern works in different contexts. I usually learn better by doing instead of just reading about it, so after coding them I feel the idea of the design patterns has cemented into my brain.
   
   <br>
 
