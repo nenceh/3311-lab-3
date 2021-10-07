@@ -79,6 +79,8 @@
   
   <hr>
   
+  <h6 align="right"> Nancy Hao<br>217120197<br>nenceh@my.yorku.ca<br>EECS3311 F21 Lab 3 </h6>
+  
   <h3><strong> INTRODUCTION </strong> </h3>
   
   This software project is about combining the implementation of a Java graphical user interface (GUI) using <i>javax.swing</i> objects and components with object-oriented programming (OOP) and object-oriented design (OOD), while using design patterns. The goal for this software project is to allow users to load 6 shapes (rectangles, squares, circles) and has the functionality to sort the shapes by their areas, all displayed visually on a Java GUI.
